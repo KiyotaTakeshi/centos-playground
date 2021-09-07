@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
 		# https://www.vagrantup.com/docs/networking/private_network.html
 		main.vm.network "private_network", ip: "192.168.33.15"
 	
+		# Vagrantfile 配置場所と同じ階層に /data を作ると仮想マシン内にマウントされる
 		main.vm.synced_folder "./data", "/vagrant"
 	
 		# https://www.vagrantup.com/docs/virtualbox/configuration.html#vboxmanage-customizations
